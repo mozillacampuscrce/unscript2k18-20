@@ -2,8 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
   
   <a class="navbar-brand" href="Dashboard.php">Event Management</a> 
-  
-  <span><?php echo "HI," . $_SESSION['username'] . " ";?></span>
+
   
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -35,7 +34,7 @@
 
             <?php }
              if($_SESSION['role'] == 'council'){
-                   <li>
+                  <li>
                    <a href="AddEvent.php">Add Event</a>
                  </li>
                  <li>
@@ -44,7 +43,7 @@
 
 
             ?>
-          <li>
+          <li> 
             <a href="changepassword.php">Change Password</a>
           </li>
         </ul>
@@ -118,6 +117,7 @@
             <i class="fa fa-fw fa-circle"></i>
           </span> -->
         </a>
+      </li>
         <!-- <div class="dropdown-menu" aria-labelledby="alertsDropdown">
           <h6 class="dropdown-header">New Alerts:</h6>
           <div class="dropdown-divider"></div>
