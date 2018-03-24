@@ -16,14 +16,15 @@
           <input class="form-control" name="EventName" rows = "5"  value="" required/>
         </div>
         <div class="form-group">
-          <label for="EventDetails">New Password</label>
+          <label for="EventDetails">Event details</label>
           <input class="form-control" type="text" name="EventDetails" value="" required/>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Confirm New Password</label>
-          <input class="form-control" type="password" name="conpassword" value="" placeholder="Password">
+          <label for="EventDate">Event Date</label>
+          <!-- <input class="form-control" type="date" name="EventDate"> -->
+          <input type="text" class="form-control" id="#sandbox-container input">
         </div>
-          <input type="submit" class="btn btn-primary btn-block" name="submit" value="Change Password" class="btn-login">
+          <input type="submit" class="btn btn-primary btn-block" name="submit" class="btn-login">
         <!-- <a class="btn btn-primary btn-block" href="#">Login</a> -->
         <div id="add_err"></div>
         </form>
@@ -32,3 +33,8 @@
    <!-- <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div> -->
  </div>
 <?php } require 'include/headerandfooter/footer.php';?>
+<script type="text/javascript">
+$('#sandbox-container input').datepicker({
+format: "dd/mm/yy"
+});
+</script>
