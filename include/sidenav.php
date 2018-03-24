@@ -1,9 +1,17 @@
 <?php session_start();?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+<<<<<<< HEAD
   
   <a class="navbar-brand" href="Dashboard.php">Event Management</a> 
 
   
+=======
+
+  <a class="navbar-brand" href="Dashboard.php">Event Management</a>
+
+  <span style="color:white"><?php echo "HI, " . $_SESSION['username'] . " ";?></span>
+
+>>>>>>> 6339ab46fec85c431feaade79274871850048dd7
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,15 +31,16 @@
         <ul class="sidenav-second-level collapse" id="collapseUserComponents">
             <?php if($_SESSION['role'] == 'admin'){ ?>
           <li>
-            <a href="adduser.php">Add User</a>
+            <a href="AddUser.php">Add User</a>
           </li>
           <li>
-            <a href="searchuser.php">Search Users</a>
+            <a href="Searchuser.php">Search Users</a>
           </li>
           <li>
             <a href="deleteuser.php">Delete User</a>
           </li>
 
+<<<<<<< HEAD
             <?php }
              if($_SESSION['role'] == 'council'){
                   <li>
@@ -42,6 +51,17 @@
                  </li>
 
 
+=======
+    <?php }
+      if($_SESSION['role'] == 'council'){ ?>
+          <li>
+          <a href="AddEvent.php">Add Event</a>
+         </li>
+         <li>
+          <a href="deleteuser.php">Delete User</a>
+         </li>
+   <?php }
+>>>>>>> 6339ab46fec85c431feaade79274871850048dd7
             ?>
           <li> 
             <a href="changepassword.php">Change Password</a>
@@ -97,7 +117,7 @@
             <span class="small float-right text-muted">11:21 AM</span>
             <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
           </a>
-          <div class="dropdown-divider"></div>
+          <div class="dropdown-divider"></div>hemes/AdminLTE/index.html
           <a class="dropdown-item" href="#">
             <strong>John Doe</strong>
             <span class="small float-right text-muted">11:21 AM</span>
@@ -124,7 +144,7 @@
           <a class="dropdown-item" href="#">
             <span class="text-success">
               <strong>
-                <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+                <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>hemes/AdminLTE/index.html
             </span>
             <span class="small float-right text-muted">11:21 AM</span>
             <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>

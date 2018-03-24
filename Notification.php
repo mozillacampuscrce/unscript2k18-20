@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+require './include/dbh.php';
+?>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -232,7 +234,7 @@
         <div class="col-12">
           <h1>Notification</h1>
           <?php
-			$con =new mysqli("localhost", "root", "", "event management");
+
 
 			if (!$con)
 			{
@@ -257,17 +259,17 @@
               </span>
             </a>
           </div><br>';
-			
+
 			}
-			
+
 
 			?>
-		  
-		  
-		  
-		  
-		  
-		  
+
+
+
+
+
+
         </div>
       </div>
     </div>
