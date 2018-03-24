@@ -29,7 +29,17 @@
             <a href="deleteuser.php">Delete User</a>
           </li>
 
-            <?php }?>
+            <?php }
+             if($_SESSION['role'] == 'council'){
+                   <li>
+                   <a href="AddEvent.php">Add Event</a>
+                 </li>
+                 <li>
+                  <a href="deleteuser.php">Delete User</a>
+                 </li>
+
+
+            ?>
           <li>
             <a href="changepassword.php">Change Password</a>
           </li>
