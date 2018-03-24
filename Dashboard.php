@@ -40,10 +40,24 @@ if($_SESSION['role'] == 'student'){ ?>
                               Echo 'Gender '.$row['Gender'].'<br>';
                               Echo 'DOB '.$row['DOB'].'<br><b>';
 
+}
+else {?>
+      <div class="content-wrapper">
+        <div class="container-fluid">
+          <!-- Breadcrumbs-->
 
+          <ol class="breadcrumb" id="expand">
+            <li class="breadcrumb-item">
+             <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active" >My Dashboard</li>
+            
+<?php }
 ?>
-</div>
+
       </ol>
+      <?php
+      if($_SESSION['role'] == 'student'){ ?>
 	<h2>	Registered Events</h2>	<h3>	<br><br>
 	 <?php
 			$username = $_SESSION['username'];
@@ -61,7 +75,9 @@ if($_SESSION['role'] == 'student'){ ?>
 				Echo 'Event Name '.$row['Event_Name'].'<br>';
                         Echo 'Event Date '.$row['Event_date'].'<br>';
 			}
-	 } ?>Upcoming Events
+	 }
+       else if ($_SESSION['role'] == 'admin'){				Echo 'Pending Events';
+} ?>
 
 </div>
 

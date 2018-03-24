@@ -13,12 +13,12 @@
       <li class="breadcrumb-item">
         <a href="#">Users</a>
       </li>
-      <li class="breadcrumb-item active">Add Event</li>
+      <li class="breadcrumb-item active">Remove Event</li>
     </ol>
 
     <div class="card mb-3">
       <div class="card-header">
-        <i class="fa fa-area-chart"></i> Add Event</div>
+        <i class="fa fa-area-chart"></i> Remove Event</div>
       <div class="card-body">
 <?php require 'include/headerandfooter/header.php'; ?>
 <?php
@@ -26,17 +26,25 @@
     require './include/sidenav.php';
 ?>
 
+<table border=2 cellpadding=5px align=center>
+      <tr><th>Event Name</th><th>Event date</th> <th>Event type</th></tr>
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      $EventName=$_POST['EventName'];
-      $Event_date=$_POST['date'];
-      $username = $_SESSION['username'];
-      $type=$_POST['type'];
-      $query = "INSERT INTO `Pending_Event`(`Event_Name`, `Event_date`, `Event_type`, `Requested_by`) VALUES ('$EventName','$Event_date','$type','$username')";
-      $result = mysqli_query($con,$query);
+            //$EventName=$_POST['EventName'];
+      //      $Event_date=$_POST['date'];
+            $username = $_SESSION['username'];
+      //      $type=$_POST['type'];
+            $query = "SELECT * FROM `Pending_Event` WHERE Requested_by=$username";
+            $result = mysqli_query($con,$query);
+		while($row = mysqli_fetch_array($result))
+		{
+                  echo '<tr><td>'.$row[Event_Name].'</td><td>'.$row[Event_date].'</td> <td>'.$row[Event_type].'</td></tr>';
+            }
+
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
 }
-?>
+?></table>
 <?php
   if($_SESSION['role'] == 'council'){ ?>
 

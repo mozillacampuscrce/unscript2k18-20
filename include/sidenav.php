@@ -32,6 +32,9 @@
           <li>
             <a href="deleteuser.php">Delete User</a>
           </li>
+          <li>
+           <a href="changepassword.php">Change Password</a>
+          </li>
 
     <?php }
       if($_SESSION['role'] == 'council'){ ?>
@@ -39,7 +42,10 @@
           <a href="AddEvent.php">Add Event</a>
          </li>
          <li>
-          <a href="deleteuser.php">Delete User</a>
+          <a href="deletependingevent.php">Delete Pending Event</a>
+         </li>
+         <li>
+           <a href="changepassword.php">Change Password</a>
          </li>
    <?php }
             ?>
@@ -108,7 +114,7 @@
         </div> -->
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="alertsDropdown" href="#">
+        <a class="nav-link" id="alertsDropdown" href="Notification.php">
           <i class="fa fa-fw fa-bell"></i>
           <!-- <span class="d-lg-none">Alerts
             <span class="badge badge-pill badge-warning">6 New</span>

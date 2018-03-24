@@ -11,9 +11,6 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
         $query = "SELECT * FROM `login` WHERE Username='$username' and Password='$password'";
         $result = mysqli_query($con, $query);
         $count = mysqli_num_rows($result);
-
-
-
         if ($count == 1) {
               session_start();
             $_SESSION['username'] = $username;
