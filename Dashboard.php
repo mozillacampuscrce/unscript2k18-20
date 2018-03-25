@@ -39,7 +39,6 @@ if($_SESSION['role'] == 'student'){ ?>
                               Echo 'Email_id '.$row['Email_id'].'<br>';
                               Echo 'Gender '.$row['Gender'].'<br>';
                               Echo 'DOB '.$row['DOB'].'<br><b>';
-
 }
 else {?>
       <div class="content-wrapper">
@@ -51,7 +50,7 @@ else {?>
              <a href="#">Dashboard</a>
             </li>
             <li class="breadcrumb-item active" >My Dashboard</li>
-            
+
 <?php }
 ?>
 

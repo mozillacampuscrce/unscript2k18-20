@@ -1,17 +1,14 @@
 <?php session_start();?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-<<<<<<< HEAD
-  
-  <a class="navbar-brand" href="Dashboard.php">Event Management</a> 
+<HEAD>
 
-  
-=======
+  <a class="navbar-brand" href="Dashboard.php">Event Management</a>
+
 
   <a class="navbar-brand" href="Dashboard.php">Event Management</a>
 
   <span style="color:white"><?php echo "HI, " . $_SESSION['username'] . " ";?></span>
 
->>>>>>> 6339ab46fec85c431feaade79274871850048dd7
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -43,18 +40,8 @@
            <a href="changepassword.php">Change Password</a>
           </li>
 
-<<<<<<< HEAD
-            <?php }
-             if($_SESSION['role'] == 'council'){
-                  <li>
-                   <a href="AddEvent.php">Add Event</a>
-                 </li>
-                 <li>
-                  <a href="deleteuser.php">Delete User</a>
-                 </li>
+</HEAD>
 
-
-=======
     <?php }
       if($_SESSION['role'] == 'council'){ ?>
           <li>
@@ -67,9 +54,8 @@
            <a href="changepassword.php">Change Password</a>
          </li>
    <?php }
->>>>>>> 6339ab46fec85c431feaade79274871850048dd7
             ?>
-          <li> 
+          <li>
             <a href="changepassword.php">Change Password</a>
           </li>
         </ul>
